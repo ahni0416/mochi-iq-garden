@@ -50,7 +50,7 @@ class GardenAudio {
     this.lastPlayed.set(name, now);
     const c = this.context, out = c.createGain();
     out.gain.value = Math.max(0, Math.min(1, this.settings.sfx * volume)); out.connect(this.masterGain);
-    const tones = { click:[640,.045,'sine'], pet:[430,.18,'sine'], pickup:[560,.09,'sine'], drop:[330,.1,'sine'], feed:[300,.11,'triangle'], eat:[220,.12,'triangle'], happy:[660,.2,'sine'], surprise:[800,.1,'triangle'], hop:[240,.12,'sine'], snap:[520,.12,'triangle'], error:[170,.14,'sine'], success:[660,.34,'sine'], reward:[880,.22,'sine'], sparkle:[1040,.28,'sine'], yawn:[260,.3,'sine'] };
+    const tones = { click:[640,.045,'sine'], pet:[430,.18,'sine'], pickup:[560,.09,'sine'], drop:[330,.1,'sine'], feed:[300,.11,'triangle'], eat:[220,.12,'triangle'], happy:[660,.2,'sine'], surprise:[800,.1,'triangle'], hop:[240,.12,'sine'], snap:[520,.12,'triangle'], rotate:[740,.075,'sine'], error:[170,.14,'sine'], success:[660,.34,'sine'], reward:[880,.22,'sine'], sparkle:[1040,.28,'sine'], yawn:[260,.3,'sine'] };
     const [freq, duration, type] = tones[name] || tones.click, osc = c.createOscillator();
     osc.type = type; osc.frequency.setValueAtTime(freq, c.currentTime);
     if (name === 'success' || name === 'reward' || name === 'sparkle' || name === 'happy') osc.frequency.exponentialRampToValueAtTime(freq * 1.45, c.currentTime + duration * .7);

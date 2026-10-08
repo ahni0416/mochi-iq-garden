@@ -40,3 +40,6 @@
 /* Blue color palette for Mochi's dinosaur */
 .dinosaur .dino-body{background:linear-gradient(145deg,#83d7ed,#4aa8d0);box-shadow:inset -6px -6px 0 #214c6010,0 8px 15px #416b3420}.dinosaur .dino-belly{background:#e4f5ed}.dinosaur .dino-neck{background:#63bdd9}.dinosaur .dino-head{background:#70c7e2;box-shadow:inset -4px -4px 0 #214c6010}.dinosaur .dino-head:after{background:#83d7ed}.dinosaur .dino-tail{background:#58b1d2}.dinosaur .dino-leg{background:#4ba5ca}.dinosaur .dino-nostril{background:#397c9b}.dinosaur .dino-smile{border-color:#397c9b}.dinosaur.mood-sad .dino-smile{border-top-color:#397c9b}
 .dinosaur .dino-art{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 5px 4px #365b4020)}
+.rotate-control{min-height:48px;touch-action:manipulation}.tray-shape{transition:filter .16s ease}.tray-piece.chosen .tray-shape{filter:drop-shadow(0 2px 3px #4c754133)}
+.tray-shape.turn-0{animation:piece-turn .18s ease-out}.tray-shape.turn-1{animation:piece-turn .18s ease-out}@keyframes piece-turn{from{transform:rotate(-90deg) scale(.9);opacity:.72}to{transform:rotate(0) scale(1);opacity:1}}
+.board-piece-cell.orientation-pending{outline:2px dashed #df876f;outline-offset:-3px;filter:saturate(.72)}.tray-shape.turn-0,.tray-shape.turn-1{transform-origin:center}
